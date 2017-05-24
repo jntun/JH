@@ -1,0 +1,14 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'default_head.html' %}
+</head>
+<body>
+    {% include 'heroscape/navbar.html' %}
+    <div id="container"></div>
+{% render_bundle 'Cards' %}
+</body>
+</html>
