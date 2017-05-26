@@ -1,43 +1,14 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
-var Card = React.createClass({
-    loadCardsFromServer: function() {
-        $.ajax({
-            url: this.props.url,
-            datatype: 'json',
-            cache: false,
-            success: function(data) {
-                this.setState({data:data});
-            }.bind(this)
-        })
-    },
-
-    getInitialState: function() {
-        return {data: []};
-    },
-
-    componentDidMount: function() {
-        this.loadCardsFromServer();
-        setInterval(this.loadCardsFromServer,
-                    this.props.pollInterval)
-    },
-
-    render: function() {
-        if(this.state.data) {
-            console.log('Received data')
-            var cardNodes = this.state.data.map(function(card) {
-                return <li id={card.id}> {card.id} - {card.unit_name} </li>
-            })
-        }
+class Main extends Component {
+    render() {
         return (
-            <div>
-                <ul>
-                    {cardNodes}
-                </ul>
+            <div className="center">
+                <h1>Welcome to Justin's Heroscape</h1>
             </div>
         )
     }
-})
+}
 
-ReactDOM.render(<Card url='/heroscape/api' pollInterval={1000} />, document.getElementById('container'))
+ReactDOM.render(<Main />, document.getElementById('container'))
