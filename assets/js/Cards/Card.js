@@ -15,8 +15,8 @@ export default class Card extends Component {
 
     render() {
         return (
-            <div className="card-container" onClick={this.expandCardInfo}>
-                <p id={this.props.unit_name}>{this.props.unit_name} - {this.props.faction}</p>
+            <div className="card-container" id={this.props.faction} onClick={this.expandCardInfo} >
+                <p id={this.props.unit_name}>{this.props.unit_name}</p>
             </div>
         )
     }

@@ -40,7 +40,7 @@ export default class Cards extends React.Component {
             )
 
             return (
-                <div className="card-center" id='Cards'>
+                <div className="card-center">
                     {cards}
                 </div>
             )

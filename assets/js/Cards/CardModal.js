@@ -58,9 +58,11 @@ export default class CardModal extends Component{
                 <p>{this.props.ability_4}</p>
                 
             </Modal.Body>
+            {/*
             <Modal.Footer>
                 <Button onClick={this.close}>Close</Button>
             </Modal.Footer>
+            */}
             </Modal>
         </div>
         )

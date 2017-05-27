@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 .footer {
         position: absolute;
         right: 0;
@@ -17,24 +21,81 @@
     text-align: center;
 }
 
-#card-container, .card-center {
-    margin-right: 25%;
-    margin-left: 15%;
-    float: left;
-}
 
-.card-expanded, #expanded-card {
-    float: right;
-    margin-right: 25%;
-}
-
-#cards {
+.card-center {
     display: flex;
+    height: 300px;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-#card > div {
-    flex: 2;
+.card-container {
+    width:250px;
+    height:250px;
+    padding: 5px;
+    margin-top: 10px;
+
+    line-height: 225px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    border-left-style:solid;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px grey;
 }
+
+@keyframes card-hover {
+    from {box-shadow: 3px 3px 3px grey;}
+    from {text-shadow: 1px 1px 1px #000000, 1px 1px 10px white;}
+    to {text-shadow: 2px 2px 5px #000000, 10px 10px 40px white;}
+    to {box-shadow: 10px 10px 5px grey;}
+}
+
+
+.card-container:hover {
+    cursor: -webkit-grabbing;
+    animation-name: card-hover;
+    animation-duration: 0.25s;
+    box-shadow: 10px 10px 5px grey;
+    text-shadow: 2px 2px 4px #000000, 10px 10px 40px white;
+}
+
+#Utgar {
+    background-color:red;
+    border-left-color:#ce0a27;
+}
+
+#Ullar {
+    background-color:#0eb519;
+    border-left-color:#0ca016;
+}
+
+#Jandar {
+    background-color: #21ede6;
+    border-left-color:#1de2dc;
+
+}
+
+#Vydar {
+    background-color: lightgrey;
+    border-left-color:lightgrey;
+}
+
+#Aquilla {
+    background-color: gold;
+    border-left-color:#232626;
+}
+
+#Einar {
+    background-color: yellow;
+    border-left-color:yellow;
+}
+
+
+
 
 .card-expanded-info {
     text-align: center;
