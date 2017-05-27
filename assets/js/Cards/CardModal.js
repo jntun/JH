@@ -6,9 +6,7 @@ export default class CardModal extends Component{
     constructor(props) {
         super(props)
         this.state = {showModal:true}
-        this.close = this.close.bind(this)
-        this.open = this.open.bind(this)
-           
+        this.close = this.close.bind(this)  
     }
 
     close() {
@@ -16,9 +14,6 @@ export default class CardModal extends Component{
         ReactDOM.unmountComponentAtNode(document.getElementById('expanded-card'))
     }
 
-    open() {
-        this.setState({ showModal: true });
-    }
 
     render() {
         return (

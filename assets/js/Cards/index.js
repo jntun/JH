@@ -11,7 +11,7 @@ class CardViewer extends Component {
     render() {
         return (
             <div id='cards'>
-                <Cards url={'/heroscape/api/cards'} pollInterval={10000} />
+                <Cards url={'/heroscape/api/cards'} pollInterval={3000} />
             </div>
         )
     }
