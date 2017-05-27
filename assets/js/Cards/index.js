@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import Button from 'react-bootstrap/lib/Button'
 import Cards from './Cards'
+import Footer from '../footer'
 
 class CardViewer extends Component {
     constructor(props) {

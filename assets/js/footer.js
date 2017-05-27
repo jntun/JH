@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-class Footer extends Component {
+export default class Footer extends Component {
     render() {
         return (
             <div id="footer" className="footer">
@@ -12,5 +12,3 @@ class Footer extends Component {
         )
     }
 }
-
-ReactDOM.render(<Footer />, document.getElementById('footer-container'))
