@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import Button from 'react-bootstrap/lib/Button'
-import Card from './Cards/Card'
+import Cards from './Cards'
 
-class Cards extends Component {
+class CardViewer extends Component {
     constructor(props) {
         super(props);
     }
@@ -11,10 +11,10 @@ class Cards extends Component {
     render() {
         return (
             <div id='cards'>
-                <Card url={'/heroscape/api/cards'} pollInterval={10000} />
+                <Cards url={'/heroscape/api/cards'} pollInterval={10000} />
             </div>
         )
     }
 }
 
-ReactDOM.render(<Cards />, document.getElementById('container'))
+ReactDOM.render(<CardViewer />, document.getElementById('card-container'))

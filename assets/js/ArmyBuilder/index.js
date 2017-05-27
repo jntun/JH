@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import Army from './ArmyBuilder/Army'
+import Army from './Army'
 
 class Builder extends Component {
     constructor(props) {

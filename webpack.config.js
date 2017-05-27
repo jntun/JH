@@ -8,11 +8,11 @@ module.exports = {
     //the entry point we created earlier. Note that './' means 
     //your current directory. You don't have to specify the extension  now,
     //because you will specify extensions later in the `resolve` section
-    entry: {main : './assets/js/index',
+    entry: {main : './assets/js/Heroscape/index',
             Navbar: './assets/js/Navbar/Navbar',
-            Cards: './assets/js/Cards',
-            Builder: './assets/js/Builder',
-            Timer: './assets/js/Timer',
+            Cards: './assets/js/Cards/index',
+            Builder: './assets/js/ArmyBuilder/index',
+            Footer: './assets/js/footer',
             },
     
     output: {

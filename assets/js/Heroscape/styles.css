@@ -1,0 +1,41 @@
+.footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        text-align: center;
+}
+
+#footer-text {
+    font-size: 10px;
+}
+
+.main-center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#card-container, .card-center {
+    margin-right: 25%;
+    margin-left: 15%;
+    float: left;
+}
+
+.card-expanded, #expanded-card {
+    float: right;
+    margin-right: 25%;
+}
+
+#cards {
+    display: flex;
+}
+
+#card > div {
+    flex: 2;
+}
+
+.card-expanded-info {
+    text-align: center;
+}

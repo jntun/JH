@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 class Main extends Component {
     render() {
         return (
-            <div className="center">
+            <div className="main-center">
                 <h1>Welcome to Justin's Heroscape</h1>
             </div>
         )

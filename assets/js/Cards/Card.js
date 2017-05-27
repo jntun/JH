@@ -1,49 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import ExpandedCard from './ExpandedCard'
 
-export default class Card extends React.Component {
+export default class Card extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {data: []}
-        this.loadCardsFromServer = this.loadCardsFromServer.bind(this);
+        this.expandCardInfo = this.expandCardInfo.bind(this)
+        this.state = {expanded:false}
     }
 
-    loadCardsFromServer() {
-        $.ajax({
-            url: this.props.url,
-            datatype: 'json',
-            cache: false,
-            success: (data) => {
-                this.setState({data:data})
-            }
-        })
-    }
-
-    componentDidMount() {
-        this.loadCardsFromServer();
-        setInterval(this.loadCardsFromServer, this.props.pollInterval)
+    expandCardInfo(e) {
+           ReactDOM.render(<ExpandedCard {...this.props}/>, document.getElementById('expanded-card'))
     }
 
     render() {
-        if(this.state.data) {
-            
-            console.log('Received data');
-            
-            var cards = this.state.data.map( 
-                (card) => {
-                    return (
-                        <p key={card.id}> {card.unit_name} - {card.classification}</p>
-                    )
-                }
-            )
-
-            return (
-                <div id='Cards'>
-                    {cards}
-                </div>
-            )
-        }
+        return (
+            <div className="card-container" onClick={this.expandCardInfo}>
+                <p id={this.props.unit_name}>{this.props.unit_name} - {this.props.faction}</p>
+            </div>
+        )
     }
-
 }
