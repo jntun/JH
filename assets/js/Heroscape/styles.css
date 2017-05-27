@@ -2,6 +2,7 @@ html, body {
     height: 100%;
 }
 
+
 .footer {
         position: absolute;
         right: 0;
@@ -31,11 +32,10 @@ html, body {
 
 .card-container {
     width:250px;
-    height:250px;
+    height:200px;
     padding: 5px;
     margin-top: 10px;
-
-    line-height: 225px;
+    line-height: 185px;
     color: white;
     font-weight: bold;
     font-size: 2em;
@@ -50,7 +50,7 @@ html, body {
 @keyframes card-hover {
     from {box-shadow: 3px 3px 3px grey;}
     from {text-shadow: 1px 1px 1px #000000, 1px 1px 10px white;}
-    to {text-shadow: 2px 2px 5px #000000, 10px 10px 40px white;}
+    to {text-shadow: 2px 2px 3px #000000, 10px 10px 40px white;}
     to {box-shadow: 10px 10px 5px grey;}
 }
 
@@ -59,44 +59,50 @@ html, body {
     cursor: -webkit-grabbing;
     animation-name: card-hover;
     animation-duration: 0.25s;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 10px 10px 3px grey;
     text-shadow: 2px 2px 4px #000000, 10px 10px 40px white;
 }
 
-#Utgar {
+#Utgar-card {
     background-color:red;
     border-left-color:#ce0a27;
 }
 
-#Ullar {
+#Ullar-card {
     background-color:#0eb519;
     border-left-color:#0ca016;
 }
 
-#Jandar {
+#Jandar-card {
     background-color: #21ede6;
     border-left-color:#1de2dc;
 
 }
 
-#Vydar {
+#Vydar-card {
     background-color: lightgrey;
     border-left-color:lightgrey;
 }
 
-#Aquilla {
+#Aquilla-card {
     background-color: gold;
     border-left-color:#232626;
 }
 
-#Einar {
+#Einar-card {
     background-color: yellow;
     border-left-color:yellow;
 }
 
-
-
-
 .card-expanded-info {
     text-align: center;
+}
+
+.dropdown-button {
+    position:absolute;
+    top:0;
+    background-color:red;
+    margin-left:45%;
+    width:10%;
+    height:10px;
 }
