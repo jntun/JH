@@ -16,7 +16,12 @@ export default class Card extends Component {
     render() {
         return (
             <div className="card-container" id={this.props.faction + "-card"} onClick={this.expandCardInfo} >
-                <p id={this.props.unit_name}>{this.props.unit_name}</p>
+                <p className="card-displayTitle" id={this.props.unit_name}>{this.props.unit_name}</p>
+                <p className="card-displayPoints">{this.props.points}</p>
+                <p className="card-displayInfo">{this.props.ability_1_name}</p>
+                <p className="card-displayInfo">{this.props.ability_2_name}</p>
+                <p className="card-displayInfo">{this.props.ability_3_name}</p>
+                <p className="card-displayInfo">{this.props.ability_4_name}</p>
             </div>
         )
     }

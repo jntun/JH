@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    color: white;
 }
 
 
@@ -35,11 +36,9 @@ html, body {
     height:200px;
     padding: 5px;
     margin-top: 10px;
-    line-height: 185px;
     color: white;
-    font-weight: bold;
-    font-size: 2em;
     text-align: center;
+    border-style: none;
     border-left-style:solid;
     border-width: 3px;
     border-left-width: 10px;
@@ -47,56 +46,125 @@ html, body {
     box-shadow: 3px 3px 3px grey;
 }
 
+.card-displayTitle {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 50px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card-displayPoints {
+    font-size: 2em;
+}
+
+.card-displayInfo {
+    font-size: 1em;
+}
+
 @keyframes card-hover {
     from {box-shadow: 3px 3px 3px grey;}
-    from {text-shadow: 1px 1px 1px #000000, 1px 1px 10px white;}
-    to {text-shadow: 2px 2px 3px #000000, 10px 10px 40px white;}
     to {box-shadow: 10px 10px 5px grey;}
 }
 
+@keyframes card-title-shadow {
+    from {text-shadow: 1px 1px 1px #000000, 1px 1px 10px white;}
+    to {text-shadow: 2px 2px 3px #000000, 10px 10px 40px white;}
+    from {border-style: dotted}
+    to {border-style: solid}
+}
+
+.card-container:hover .card-displayTitle {
+    animation-name:card-title-shadow;
+    text-shadow: 2px 2px 4px #000000, 0px 5px 30px white;
+}
 
 .card-container:hover {
     cursor: -webkit-grabbing;
+    border-left-style: solid;
     animation-name: card-hover;
     animation-duration: 0.25s;
     box-shadow: 10px 10px 3px grey;
-    text-shadow: 2px 2px 4px #000000, 10px 10px 40px white;
+    border-style: solid;
 }
 
-#Utgar-card {
-    background-color:red;
-    border-left-color:#ce0a27;
+
+#Utgar-card, .Utgar-card-modal {
+    background-color:#d32524;
+    border-color:#2e2b26;
 }
 
-#Ullar-card {
-    background-color:#0eb519;
-    border-left-color:#0ca016;
+#Ullar-card,  .Ullar-card-modal {
+    background-color:#399a44;
+    border-color:#6d4622;
 }
 
-#Jandar-card {
-    background-color: #21ede6;
-    border-left-color:#1de2dc;
+#Jandar-card, .Jandar-card-modal {
+    background-color: #0a7dbc;
+    border-color:#c6d9dc;
 
 }
 
-#Vydar-card {
-    background-color: lightgrey;
-    border-left-color:lightgrey;
+#Vydar-card, .Vydar-card-modal {
+    background-color: #568194;
+    border-color:#786e6c;
 }
 
-#Aquilla-card {
-    background-color: gold;
-    border-left-color:#232626;
+#Aquilla-card, .Aquilla-card-modal {
+    background-color: #061422;
+    border-color:#dcc206;
 }
 
-#Einar-card {
-    background-color: yellow;
-    border-left-color:yellow;
+#Einar-card, .Einar-card-modal {
+    background-color: #c18e49;
+    border-color:#4e2641;
+}
+
+#Valkrill-card, .Valkrill-card-modal {
+    background-color: #b49b49;
+    border-color: #a5897b;
+}
+
+.modal-title {
+    font-size: 2.5em;
+    padding-left: 50px;
+    font-weight: bold;
 }
 
 .card-expanded-info {
     text-align: center;
+    display:flex;
+    flex-flow: row wrap;
 }
+
+#card-modal-desc {
+    padding-left: 75px;
+}
+
+#card-modal-stats {
+    padding-left: 125px;
+}
+
+.ability-title {
+    text-decoration: underline;
+    padding-top: 15px;
+    padding-bottom: 0px; 
+    font-size: 20px;
+}
+
+.ability-desc {
+    position: relative;
+    top: 0px;    
+    margin-left:10px;
+}
+
+.Utgar-card-modal-border { background-color:#2e2b26; }
+.Ullar-card-modal-border {background-color:#6d4622;}
+.Jandar-card-modal-border {background-color:#c6d9dc;}
+.Vydar-card-modal-border {background-color:#786e6c;}
+.Aquilla-card-modal-border {background-color:#dcc206;}
+.Einar-card-modal-border {background-color:#4e2641;}
+.Valkrill-card-modal-border {background-color: #a5897b;}
 
 .dropdown-button {
     position:absolute;
