@@ -13,7 +13,6 @@ module.exports = {
             Cards: './assets/js/Cards/index',
             Builder: './assets/js/ArmyBuilder/index',
             Footer: './assets/js/footer',
-            Test: './assets/js/Testing/Search',
             },
     
     output: {

@@ -8,6 +8,7 @@ from api.serializers import CardSerializer
 def card_list(request):
   if request.method == 'GET':
     cards = Card.objects.all()
+    cards = cards.order_by('points')
     serializer = CardSerializer(cards, many=True)
     return Response(serializer.data)
 
@@ -16,11 +17,7 @@ def card_query_list(request, searchName, format=None):
   try:
     cards = []
     searchName = searchName.lower()
-    queryCards = Card.objects.all()
-    for card in queryCards:
-      fixedName = card.unit_name.lower()
-      if(fixedName.__contains__(searchName)):
-        cards.append(card)
+    cards = Card.objects.filter(unit_name__icontains=searchName)
     serializer = CardSerializer(cards, many=True)
     response = Response(serializer.data)
   except:
