@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    {% include 'default_head.html' %}
 </head>
 <body>
 {% load render_bundle from webpack_loader %}
-<div id="container">
-
-</div>
-{% render_bundle 'Cards' %}
+<div id="container"></div>
+{% render_bundle 'Test' %}
 </body>
 </html>

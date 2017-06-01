@@ -13,6 +13,7 @@ module.exports = {
             Cards: './assets/js/Cards/index',
             Builder: './assets/js/ArmyBuilder/index',
             Footer: './assets/js/footer',
+            Test: './assets/js/Testing/Search',
             },
     
     output: {
@@ -47,6 +48,7 @@ module.exports = {
                     loader: 'babel-loader',
                     query: {
                         //specify that we will be dealing with React code
+                        plugins: ['transform-class-properties'],
                         presets: ['react']
                     }
                 }

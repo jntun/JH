@@ -1,4 +1,13 @@
 {
+
+  "watch" : {
+    "build" : {
+      "patterns":["assets/js"],
+      "extensions":"js,jsx",
+      "ignore":"node_modules"
+    }
+  },
+
   "name": "npm_home",
   "version": "1.0.0",
   "main": "index.js",
@@ -11,7 +20,6 @@
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
-    "react-sound": "^0.6.1",
     "webpack": "^2.5.1",
     "webpack-bundle-tracker": "^0.2.0"
   },
@@ -27,7 +35,9 @@
     "webpack-bundle-tracker": "^0.2.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "./node_modules/.bin/webpack --config webpack.config.js",
+    "watch" : "npm-watch build"
   },
   "repository": {
     "type": "git",

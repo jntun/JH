@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['10.0.0.69', 'localhost', '127.0.0.1', '10.0.0.7', '172.16.42.1
 # Application definition
 
 INSTALLED_APPS = [
+    'api',
     'UserArmyBuilder',
     'Heroscape',
     'webpack_loader',

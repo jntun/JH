@@ -40,9 +40,9 @@ export default class Cards extends React.Component {
             )
 
             return (
-                <div className="card-center">
+                {/*<div className="card-center">
                     {cards}
-                </div>
+                </div>*/}
             )
         }
     }

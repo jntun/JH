@@ -27,6 +27,7 @@ export default class Army extends Component {
 
     render() {
         if(this.state.data) {
+            
             console.log('Receieved data');
 
             var armys = this.state.data.map(
@@ -38,7 +39,7 @@ export default class Army extends Component {
             )
 
             return (
-                <div id='Armys'>
+                <div className="army-center">
                     {armys}
                 </div>
             )

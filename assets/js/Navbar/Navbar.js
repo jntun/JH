@@ -36,9 +36,10 @@ class MainNav extends Component {
                         <Nav className="nav-items">
                             <MenuItem href="/heroscape/cards/" className="card-item">Cards</MenuItem>
                             <NavDropdown eventKey={2} title="Armys" id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1} href="">Army 1</MenuItem>
-                                <MenuItem eventKey={3.2}>Army 2</MenuItem>
-                                <MenuItem eventKey={3.3}>Army 3</MenuItem>
+                                <MenuItem eventKey={3.1} href="/heroscape/armys">All</MenuItem>
+                                <MenuItem eventKey={3.2} href="">Army 1</MenuItem>
+                                <MenuItem eventKey={3.3}>Army 2</MenuItem>
+                                <MenuItem eventKey={3.4}>Army 3</MenuItem>
                             </NavDropdown>
                         </Nav>
                         <Nav pullRight>

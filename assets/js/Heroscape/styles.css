@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    color: white;
+    color: black;
 }
 
 
@@ -26,13 +26,13 @@ html, body {
 
 .card-center {
     display: flex;
-    height: 300px;
+    height: auto;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .card-container {
-    width:250px;
+    width:275px;
     height:200px;
     padding: 5px;
     margin-top: 10px;
@@ -88,6 +88,9 @@ html, body {
     border-style: solid;
 }
 
+.card-modal {
+    color: white;
+}
 
 #Utgar-card, .Utgar-card-modal {
     background-color:#d32524;
