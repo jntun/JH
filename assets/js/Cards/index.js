@@ -1,17 +1,18 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
+import { SplitButton, MenuItem } from 'react-bootstrap'
 import Card from './Card'
 
 class CardViewer extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {cards: [], url: ''}
+        this.state = {cards: [], appendUrl: '', searchValue: ''}
     }
 
     requestCards = () => {
         $.ajax({
-            url: this.props.url + this.state.url,
+            url: this.props.url + this.state.appendUrl + this.state.searchValue,
             datatype: 'json',
             cache: false,
             success: (data) => {
@@ -26,7 +27,7 @@ class CardViewer extends Component {
     }
 
     handleSearchChange = (e) => {
-        this.setState({url:e.target.value})
+        this.setState({searchValue:e.target.value})
         this.requestCards()
     }
 
@@ -45,6 +46,10 @@ class CardViewer extends Component {
             <div>
                 <div className="main-center" id="card-search">
                     <input onChange={this.handleSearchChange} type="text" placeholder="Search for a card" />
+                    <SplitButton title="Search by" key="1">
+                        <MenuItem eventKey="2">Name</MenuItem>
+                        <MenuItem eventKey="2">Something</MenuItem>
+                    </SplitButton>
                 </div>
                 <div>
                     <div className="card-center">
