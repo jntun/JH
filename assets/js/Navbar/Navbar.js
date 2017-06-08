@@ -8,17 +8,14 @@ class MainNav extends Component {
         super(props)
 
         this.state = {toggle:true}
-        
-        this.toggleNavbar = this.toggleNavbar.bind(this)
     }
 
-    toggleNavbar() {
+    toggleNavbar = () => {
         if(this.state.toggle) {
             this.setState({toggle:false})
         } else {
             this.setState({toggle:true})
         }
-        console.log(this.state.toggle)
     }
 
     render() {

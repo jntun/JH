@@ -7,7 +7,6 @@ from api.serializers import CardSerializer
 
 @api_view(['GET'])
 def card_list(request):
-  if request.method == 'GET':
     cards = Card.objects.all()
     cards = cards.order_by('points')
     serializer = CardSerializer(cards, many=True)

@@ -90,7 +90,6 @@ html, body {
 
 .card-modal {
     color: white;
-    padding-top:40%;
 }
 
 #Utgar-card, .Utgar-card-modal {
@@ -127,6 +126,11 @@ html, body {
 #Valkrill-card, .Valkrill-card-modal {
     background-color: #b49b49;
     border-color: #a5897b;
+}
+
+#Marvel-card, .Marvel-card-modal {
+    background-color: crimson;
+    border-color: grey;
 }
 
 .modal-title {
@@ -169,12 +173,12 @@ html, body {
 .Aquilla-card-modal-border {background-color:#dcc206;}
 .Einar-card-modal-border {background-color:#4e2641;}
 .Valkrill-card-modal-border {background-color: #a5897b;}
+.Marvel-card-modal-border {background-color:grey}
 
 .dropdown-button {
     position:absolute;
     top:0;
     background-color:red;
-    margin-left:45%;
     width:10%;
     height:10px;
 }

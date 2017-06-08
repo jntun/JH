@@ -44,3 +44,12 @@ class ArmySerializer(serializers.ModelSerializer):
       'owner',
       'cards',
     )
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            'id',
+            'username',
+            'first_name',
+        )
