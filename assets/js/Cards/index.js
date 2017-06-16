@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
 import Card from './Card'
 import SearchDropdown from './SearchDropdown'
+import SearchHelp from './SearchHelp'
 
 class CardViewer extends Component {
     constructor(props) {
@@ -31,6 +32,7 @@ class CardViewer extends Component {
     }
 
     render() {
+        var cardCount = 0;
         if(this.state.cards) {
             var displayCards = this.state.cards.map(
                (card) => {
@@ -48,16 +50,17 @@ class CardViewer extends Component {
                       card.type.toLowerCase().indexOf(this.state.searchValue) !== -1 ||
                       card.size.toLowerCase().indexOf(this.state.searchValue) !== -1
                       ) {
-                       return <Card key={card.id} {...card} />
-                   }
+                        cardCount++;
+                        return <Card key={card.id} {...card} />
+                    }
                 }
             )
         }
-
         return (
             <div>
                 <div className="main-center" id="card-search">
-                    <input onChange={this.handleSearchChange} type="text" placeholder="Airborne, Flying, Life Drain..." />
+                    <SearchHelp cardCount={cardCount} />
+                    <input onChange={this.handleSearchChange} type="text" placeholder="Search here" />
                 </div>
                 <div>
                     <div className="card-center">

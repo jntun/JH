@@ -31,6 +31,18 @@ html, body {
     justify-content: space-around;
 }
 
+.search-help-container {
+    background-color: darkred;
+    color: white;
+    width: 100%;
+}
+
+.search-help-container-hidden {
+    background-color: darkred;
+    color: white;
+    width: 100%;
+}
+
 .card-container {
     width:275px;
     height:200px;
@@ -43,7 +55,7 @@ html, body {
     border-width: 3px;
     border-left-width: 10px;
     border-radius: 3px;
-    box-shadow: 3px 3px 3px grey;
+    box-shadow: 3px 3px 3px white;
 }
 
 .card-displayTitle {
@@ -63,7 +75,7 @@ html, body {
 }
 
 @keyframes card-hover {
-    from {box-shadow: 3px 3px 3px grey;}
+    from {box-shadow: 3px 3px 3px white;}
     to {box-shadow: 10px 10px 5px grey;}
 }
 
