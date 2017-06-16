@@ -1,6 +1,5 @@
 *.pyc
 .idea/
 node_modules/
-assets/bundles/
 webpack-stats.json
 webpack-stats.json
